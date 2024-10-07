@@ -6,8 +6,9 @@ using namespace std;
         if(n==1){
         	cout<<"for Disk "<<n<<endl;
         	cnt++;
+            cout<<"Move from "<<source<<"to"<<dest<<endl;
 		}
-        cout<<"Move from "<<source<<"to"<<dest<<endl;
+        
         else{
         	cout<<"For Disk "<<n<<endl;
         
