@@ -7,9 +7,11 @@ class Node {
     int data;
     Node *left;
     Node *right;
+    int height ;
     Node (int val){
         data = val;
         left = right = nullptr;
+        height = 1;
     }
 }
 
@@ -69,6 +71,33 @@ void printLevelOrder(Node *root){
     }
 }
 
+int getHeight(Node *root){
+    if(root==nullptr){
+        return 0;
+    }
+    return root->height;
+
+}
+
+int getbalance(Node *root){
+    if(root==nullptr){
+        return 0;
+    }
+    return getHeight(root->left) - getHeight(root->right);
+}
+// Avalenche tree
+// left and right Rotation
+
+// Node* leftRotate(Node* root){
+//     Node* temp = root->right;
+//     Node *remp = 
+//     while(temp)
+// };
+
+// Node *rightRotate(Node *root){
+//     Node *temp = root->left;
+
+// }
 
 int main(){
     Node* root = nullptr;
