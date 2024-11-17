@@ -57,6 +57,7 @@ Node *rightRotation(Node *root){
     return child;
 }
 
+
 Node *insert(Node *root,int key){
     if(!root){
         return new Node(key);
@@ -83,10 +84,20 @@ Node *insert(Node *root,int key){
         return rightRotate(root);
     }
     // Right Right Wala Case
-    if(balance <-1 && key>root->right->data){
+    else if(balance <-1 && key>root->right->data){
         return leftRotate(root);
     }
-
+    else if(balance >1 && key > root->left->data){
+        root->left=leftRotate(root->left);
+        return rightRotation(root);
+    }
+    else if(balance <-1 && key< root->right->data){
+        root->right=rightRotate(root->right);
+        return leftRotation(root);
+    }
+    else{
+        return root;
+    }
 }
 
 int main()
