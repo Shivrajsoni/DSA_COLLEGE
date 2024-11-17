@@ -29,7 +29,7 @@ class queue{
 			}
 			else if{
 			rear->next=new Node(x);
-			rear=rear-next();
+			rear=rear->next();
 			}
 		}
 		void pop(){
