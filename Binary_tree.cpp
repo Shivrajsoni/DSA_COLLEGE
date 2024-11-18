@@ -85,19 +85,7 @@ int getbalance(Node *root){
     }
     return getHeight(root->left) - getHeight(root->right);
 }
-// Avalenche tree
-// left and right Rotation
 
-// Node* leftRotate(Node* root){
-//     Node* temp = root->right;
-//     Node *remp = 
-//     while(temp)
-// };
-
-// Node *rightRotate(Node *root){
-//     Node *temp = root->left;
-
-// }
 
 int main(){
     Node* root = nullptr;
