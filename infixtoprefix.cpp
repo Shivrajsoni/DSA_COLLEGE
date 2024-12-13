@@ -1,7 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
-// Function to check if the character is an operator
+
+//An Infix Expression (or Infix Notation) is characterized by a math expression wherein the operators are placed between operands, (as in 2 + 3).
+
+//As the name implies, a Postfix Expression (or Postfix Notation, or Reverse Polish Notation) is characterized by a math expression wherein the operators are placed after their operands (2 + 3 infix becomes 2 3 + postfix).
+
+// function to check if the character is an operator
 bool isOperator(char c)
 {
     return (!isalpha(c) && !isdigit(c));

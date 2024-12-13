@@ -32,10 +32,9 @@ void heapify(int *arr,int n,int i){
 }
 // build heap
 void Buildheap(int *arr,int n){
-	
 	for(int i=n/2-1;i>=0;i--){
 		heapify(arr,n,i);
-	}
+	} 
 }
 void HeapSort(int *arr,int n){
 	Buildheap(arr,n);
