@@ -20,16 +20,21 @@ class stack{
 			size=0;
 		}
 		void push(int val){
-			Node *temp=new Node(val);
-			temp->next=top;
-			top=temp;
+			Node *temp = new Node(val);
+			temp->next = top;
+			top = temp;
 			size++;
 		}
 		void pop(){
-			Node *temp=top;
-			top=top->next;
-			delete temp;
-			size--;
+			if(top==NULL){
+				cout<<"Stack is empty"<<endl;
+			}
+			else{
+				Node *temp = top;
+				top=top->next;
+				delete(temp);
+				size--;
+			}
 		}
 		// size
 		int size(){
@@ -37,5 +42,10 @@ class stack{
 		}
 };
 int main(){
+	stack s;
+	s.push(10);
+	s.push(20);
+	s.push(30);
+	cout<<s.size()<<endl;
 	
 }

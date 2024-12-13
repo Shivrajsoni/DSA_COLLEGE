@@ -1,0 +1,44 @@
+        -:    0:Source:codeCoverage.cpp
+        -:    0:Graph:codeCoverage.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Source is newer than graph
+        -:    1:./#include <iostream>
+        -:    2:
+        -:    3:// Function to determine if a character is a lowercase vowel
+    #####:    4:bool isLowerVowel(char c) {
+    #####:    5:    switch (c) {
+    #####:    6:        case 'a':
+        -:    7:        case 'e':
+        -:    8:        case 'i':
+        -:    9:        case 'o':
+        -:   10:        case 'u':
+    #####:   11:            return true;
+    #####:   12:        default:
+    #####:   13:            return false;
+        -:   14:    }
+        -:   15:}
+        -:   16:
+        -:   17:// Function to compare two integers
+    #####:   18:void compare(int x, int y) {
+    #####:   19:    if (x > y) {
+    #####:   20:        std::cout << x << " is greater than " << y << '\n'; // case 1
+    #####:   21:    } else if (x < y) {
+    #####:   22:        std::cout << x << " is less than " << y << '\n'; // case 2
+        -:   23:    } else {
+    #####:   24:        std::cout << x << " is equal to " << y << '\n'; // case 3
+        -:   25:    }
+    #####:   26:}
+        -:   27:
+    #####:   28:int main() {
+        -:   29:    // Test the isLowerVowel function
+    #####:   30:    std::cout << "Is 'a' a lower vowel? " << (isLowerVowel('a') ? "Yes" : "No") << '\n';
+    #####:   31:    std::cout << "Is 'q' a lower vowel? " << (isLowerVowel('q') ? "Yes" : "No") << '\n';
+        -:   32:
+        -:   33:    // Test the compare function
+    #####:   34:    compare(5, 3);   // Case 1
+    #####:   35:    compare(2, 4);   // Case 2
+    #####:   36:    compare(7, 7);   // Case 3
+        -:   37:
+    #####:   38:    return 0;
+        -:   39:}
