@@ -15,6 +15,8 @@ vector<int>dijkstra(int V, vector<vector<pii>>& adj, int source){
 	priority_queue<pii,vector<pii>,greater<pii>> pq;
 
 	vector<int> dist(V,INT_MAX);
+	vector<bool>Explored(V,0);
+
 	dist[source] = 0;
 	pq.push({0,source});
 
@@ -22,14 +24,18 @@ vector<int>dijkstra(int V, vector<vector<pii>>& adj, int source){
 		int d = pq.top.first // distance from the top node
 		int u = pq.top.second // current node
 		pq.pop();
+			
+		if(Explored[u]==1)
+			continue;
 
+		Explored[u]==1;
 		// checking the neighbour
 		for(auto &neighbour : adj[u]){
 			int v = neighbour.first;
 			int weight = neighbour.second;
 
 			// relaxation step
-			if(dist[u]+weight < dist[v]){
+			if(dist[u]+weight < dist[v] && !Explored[v]){
 				dist[v] = dist[u] + weight ;
 				pq.push({dist[v],v});
 			}

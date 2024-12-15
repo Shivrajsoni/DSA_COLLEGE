@@ -12,6 +12,22 @@ void DFSTraversal(int node,vector<int>adj[],vector<bool>visited,vector<int>&ans)
 	}
 
 }
+// detecting the cycle 
+void detectCycle(int node,int parent,vector<int>adj[],vector<bool>&visited){
+	visited[node] = 1;
+	for(int j =0;j<adj[node].size();j++){
+		if(parent ==adj[node][j]==1){
+			continue;
+		}
+		if(visited[adj[node][j]] ==1){
+			return 1;
+		}
+		if(detectCycle(adj[node][j],node,adj[],visited))
+			return 1;
+	}
+	return 0;
+}
+
 
 int main(){
 	int V;
